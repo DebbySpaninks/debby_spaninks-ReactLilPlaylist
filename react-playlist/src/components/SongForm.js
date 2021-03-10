@@ -1,6 +1,6 @@
 import React from 'react';
 
-
+// create function for form input and display it
 function SongForm() {
     return (
         <div>
