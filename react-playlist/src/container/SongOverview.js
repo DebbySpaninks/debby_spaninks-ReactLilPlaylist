@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import SongForm from '../components/SongForm';
 import SongTable from '../components/table/SongTable';
 
+// create class based component that manage state
 class SongOverview extends Component {
 
     constructor() {
