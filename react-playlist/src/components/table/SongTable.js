@@ -1,7 +1,7 @@
 import React from 'react';
 import SongTableItem from './SongTableItem';
 
-// function with table headers and SongTableItems to display
+// function to display table headers and SongTableItems
 function SongTable() {
     return (
         <div>
