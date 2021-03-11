@@ -63,11 +63,11 @@ function SongForm({ addSong }) {
                 <option value="5">5</option>
             </select>
             {/* button to add songs after input */}
-            <input
+            <button
                 className='submit-button'
-                type='submit'
-                value='Add Song'
-            />
+                type='submit'>
+                    Add song
+            </button>
         </form>
     );
 }
