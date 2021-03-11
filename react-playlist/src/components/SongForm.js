@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
-// function with form input + select and display them
+// function with form input + select to display them
 function SongForm({ addSong }) {
-    const [title, setTitle] = useState('');
+    const [title, setTitle] = useState("");
     const [artist, setArtist] = useState('');
     const [genre, setGenre] = useState('');
     const [rating, setRating] = useState('');

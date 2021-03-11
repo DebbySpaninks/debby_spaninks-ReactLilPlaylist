@@ -1,5 +1,5 @@
 import React from 'react';
-import SongTableItem from './SongTableItem';
+// import SongTableItem from './SongTableItem';
 
 // function to display table headers and SongTableItems
 function SongTable(props) {
@@ -14,8 +14,8 @@ function SongTable(props) {
                         <th>Rating</th>
                     </tr>
                 </thead>
+                {/* manage currentValue and displays index of input songs*/}
                 <tbody>
-                    {/* manage currentValue and displays index of input songs*/}
                     {props.songs.map(currentValue => {
                         return <tr>
                             {/* display table data*/}
@@ -27,7 +27,6 @@ function SongTable(props) {
                     })}
                 </tbody>
             </table>
-            <SongTableItem />
         </div>
     );
 }
