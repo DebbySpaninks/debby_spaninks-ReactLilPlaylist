@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
 
 // function with form input + select and display them
-function SongForm({ addSongLog }) {
-    const [title, setTitle] = useState();
-    const [artist, setArtist] = useState();
-    const [genre, setGenre] = useState();
-    const [rating, setRating] = useState();
+function SongForm({ addSong }) {
+    const [title, setTitle] = useState('');
+    const [artist, setArtist] = useState('');
+    const [genre, setGenre] = useState('');
+    const [rating, setRating] = useState('');
 
+    // function to handle submit
     const handleSubmit = event => {
-        // after submit add input to addSongLog
-        addSongLog([title, artist, genre, rating])
+        // after submit add input to addSong
+        addSong([title, artist, genre, rating])
         event.preventDefault();
     }
 
@@ -43,9 +44,10 @@ function SongForm({ addSongLog }) {
                 <option value="Nederpop">Nederpop</option>
                 <option value="HiphopRap">Hiphop Rap</option>
             </select>
-            {/* add select options for RATING */}
+            {/* select options for RATING */}
             <select
                 name="rating"
+                type="number"
                 value={rating}
                 onChange={event => setRating(event.target.value)}
             >
@@ -56,11 +58,11 @@ function SongForm({ addSongLog }) {
                 <option value="4">4</option>
                 <option value="5">5</option>
             </select>
-            {/* input button to add songs after input */}
+            {/* button to add songs after input */}
             <input
                 className='submit-button'
                 type='submit'
-                value='Log Song'
+                value='Add Song'
             />
         </form>
     );

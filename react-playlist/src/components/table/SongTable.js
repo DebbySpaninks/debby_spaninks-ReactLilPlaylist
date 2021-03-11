@@ -2,17 +2,30 @@ import React from 'react';
 import SongTableItem from './SongTableItem';
 
 // function to display table headers and SongTableItems
-function SongTable() {
+function SongTable(props) {
     return (
         <div>
-            <h2>header SongTable</h2>
             <table style={{ width: "100%" }}>
-                <tr className="table-header">
-                    <th className="song-row__item">Title</th>
-                    <th className="song-row__item">Artist</th>
-                    <th className="song-row__item">Genre</th>
-                    <th className="song-row__item">Rating</th>
-                </tr>
+                <thead>
+                    <tr className="table-header">
+                        <th>Title</th>
+                        <th>Artist</th>
+                        <th>Genre</th>
+                        <th>Rating</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {/* manage currentValue and displays index of input songs*/}
+                    {props.songs.map(currentValue => {
+                        return <tr>
+                            {/* display table data*/}
+                            <td>{currentValue[0]}</td>
+                            <td>{currentValue[1]}</td>
+                            <td>{currentValue[2]}</td>
+                            <td>{currentValue[3]}</td>
+                        </tr>
+                    })}
+                </tbody>
             </table>
             <SongTableItem />
         </div>

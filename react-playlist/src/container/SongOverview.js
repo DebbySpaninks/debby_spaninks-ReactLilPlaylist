@@ -1,32 +1,23 @@
-import React, {Component} from 'react';
+import React, { useState } from 'react';
 import SongForm from '../components/SongForm';
 import SongTable from '../components/table/SongTable';
 
-// create class based component that manage state from songs 
-class SongOverview extends Component {
-
-    constructor() {
-        super()
-        this.state =
-        {
-            songs: []
-        }
-
-    }
-// make function to add new state from song to SongTableItem
-    addSong = (song) => {
-        // doe iets om de state aan te passen        prevState???
+// function that manage useState from songs 
+function SongOverview(props) {
+    const [songs, setSongs] = useState([]);
+    // function that add songItems
+    const addSong = song => {
+        let songItems = [...songs, song];
+        setSongs(songItems);
     }
 
-    render() {
-        return (
-            <div>
-                {/* display SongForm and SongTable */}
-                <SongForm addSong={this.addSong} />
-                <SongTable songs={this.state.songs} />
-            </div>
-        );
-    }
+    return (
+        <div>
+            {/* display SongForm and SongTable */}
+            <SongForm addSong={addSong} />
+            <SongTable songs={songs} />
+        </div>
+    );
 }
 
 export default SongOverview;
