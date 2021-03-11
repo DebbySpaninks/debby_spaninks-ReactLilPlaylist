@@ -1,3 +1,48 @@
 .App {
   text-align: center;
 }
+
+.header {
+  background-color: #6c469c;
+  min-height: 30vh;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center;                            nog weghalen!!!!! */
+  justify-content: center;
+  font-size: 35px;
+  color: white;
+}
+
+.table-data {
+  font-size: 20px;
+  padding: 15px;
+  background: rgb(217, 205, 240);
+  list-style: none;
+  margin: 5px;
+  color: black;
+}
+
+.table-data:nth-child(odd) {
+  background: rgb(157, 138, 192);
+}
+
+.input-primary,
+.select-primary {
+  width: 200px;
+  color: rgb(0, 0, 0);
+  padding: 14px 20px;
+  margin: 20px 0;
+  border: 1px solid rgb(100, 99, 99);
+  border-radius: 4px;
+  /* cursor: pointer; */
+  background-color: lightgray;
+  margin-left: 10px;
+}
+.form input,
+.form select {
+  /* padding-left: 25px; */
+  padding-right: 0;
+  width: 230px;
+  background-color: white;
+  border: 1px solid lightgray;
+}

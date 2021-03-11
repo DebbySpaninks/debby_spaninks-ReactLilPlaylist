@@ -15,7 +15,7 @@ function SongForm({ addSong }) {
     }
 
     return (
-        <form onSubmit={event => { handleSubmit(event) }}>
+        <form className="form" onSubmit={event => { handleSubmit(event) }}>
             <h2>header SongForm</h2>
             {/* input for TITLE */}
             <input
@@ -23,6 +23,7 @@ function SongForm({ addSong }) {
                 type="text"
                 value={title}
                 placeholder="Title"
+                className="input-primary"
                 onChange={event => setTitle(event.target.value)}
             />
             {/* input for ARTIST */}
@@ -31,12 +32,14 @@ function SongForm({ addSong }) {
                 type="text"
                 value={artist}
                 placeholder="Artist"
+                className="input-primary"
                 onChange={event => setArtist(event.target.value)}
             />
             {/* select options for GENRE */}
             <select
                 name="genre"
                 value={genre}
+                className="select-primary"
                 onChange={event => setGenre(event.target.value)}
             >
                 <option value="">Genre</option>
@@ -49,6 +52,7 @@ function SongForm({ addSong }) {
                 name="rating"
                 type="number"
                 value={rating}
+                className="select-primary"
                 onChange={event => setRating(event.target.value)}
             >
                 <option value="">Rating</option>

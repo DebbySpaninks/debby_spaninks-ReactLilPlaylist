@@ -18,12 +18,12 @@ function SongTable(props) {
                 {/* manage currentValue and displays index of input songs*/}
                 <tbody>
                     {props.songs.map(currentValue => {
-                        return <tr>
+                        return <tr className="table-row">
                             {/* display table data*/}
-                            <td>{currentValue[0]}</td>
-                            <td>{currentValue[1]}</td>
-                            <td>{currentValue[2]}</td>
-                            <td>{currentValue[3]}</td>
+                            <td className="table-data">{currentValue[0]}</td>
+                            <td className="table-data">{currentValue[1]}</td>
+                            <td className="table-data">{currentValue[2]}</td>
+                            <td className="table-data">{currentValue[3]}</td>
                         </tr>
                     })}
                 </tbody>
