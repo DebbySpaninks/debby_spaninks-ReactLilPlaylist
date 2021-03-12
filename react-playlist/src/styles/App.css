@@ -42,16 +42,14 @@ button {
 }
 
 table {
-  font-size: 2.5em;
+  font-size: 2em;
   margin-left: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
  
-/* .table-header th {
-  width: 160px;                           hoe krijg ik met flex alles gecentreerd??? of width aanpassen ?????
-} */
+.table-header th {
+  width: 160px;                         
+}
+/*   geen flex gebruiken, gaat niet samen met table !!!!    width aanpassen ????? */
 
 th, td {
   width: 180px;
