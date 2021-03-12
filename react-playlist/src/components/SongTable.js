@@ -1,19 +1,12 @@
 import React from 'react';
+import TableHeader from './TableHeader';
 
-// function to display table headers and SongTableItems
+// function to display SongTableItems
 function SongTable(props) {
     return (
         <div>
             <table className="table" style={{ width: "100%" }}>
-                <thead>
-                    <tr className="table-header">
-                        <th>Title</th>
-                        <th>Artist</th>
-                        <th>Genre</th>
-                        <th>Rating</th>
-                        <th className="icon-header"></th>
-                    </tr>
-                </thead>
+                <TableHeader />
                 <tbody>
                     {/* manage currentValue and displays index from song input*/}
                     {props.songs.map(currentValue => {
