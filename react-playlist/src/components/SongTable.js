@@ -1,6 +1,4 @@
 import React from 'react';
-// import keyIndex from 'react-key-index';
-// import SongTableItem from './SongTableItem';
 
 // function to display table headers and SongTableItems
 function SongTable(props) {
@@ -15,15 +13,15 @@ function SongTable(props) {
                         <th>Rating</th>
                     </tr>
                 </thead>
-                {/* manage currentValue and displays index of input songs*/}
                 <tbody>
+                    {/* manage currentValue and displays index from song input*/}
                     {props.songs.map(currentValue => {
-                        return <tr>
-                            {/* display table data*/}
-                            <td>{currentValue[0]}</td>
-                            <td>{currentValue[1]}</td>
-                            <td>{currentValue[2]}</td>
-                            <td>{currentValue[3]}</td>
+                        return <tr song={currentValue} key={currentValue.id}>
+                            {/* display table data objects*/}
+                            <td>{currentValue.title}</td>
+                            <td>{currentValue.artist}</td>
+                            <td>{currentValue.genre}</td>
+                            <td>{currentValue.rating}</td>
                         </tr>
                     })}
                 </tbody>
