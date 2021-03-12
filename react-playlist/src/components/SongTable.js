@@ -11,6 +11,7 @@ function SongTable(props) {
                         <th>Artist</th>
                         <th>Genre</th>
                         <th>Rating</th>
+                        <th className="icon-header"></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -22,6 +23,7 @@ function SongTable(props) {
                             <td>{currentValue.artist}</td>
                             <td>{currentValue.genre}</td>
                             <td>{currentValue.rating}</td>
+                            <td className="icon"></td>
                         </tr>
                     })}
                 </tbody>
