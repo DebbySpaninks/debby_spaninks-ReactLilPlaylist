@@ -42,18 +42,23 @@ button {
 }
 
 table {
-  font-size: 1.5em;
+  font-size: 2.5em;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
  
-.table-header th {
-  width: 200px;
-}
+/* .table-header th {
+  width: 160px;                           hoe krijg ik met flex alles gecentreerd??? of width aanpassen ?????
+} */
 
-td {
-  width: 200px;
+th, td {
+  width: 180px;
   font-size: 0.8em;
   padding: 15px;
-  background: rgb(56, 22, 119);
+  margin-left: 30px;
+  /* background: rgb(56, 22, 119); */
   color: black;
 }
 
@@ -65,10 +70,27 @@ tr:nth-child(even) td {
   background: rgb(197, 184, 221);
 }
 
-.icon {
+.td-icon {
   background-color: white;
-  order: 2;
-  width: 18px;
-  height: 18px;
-  padding-top: 4px;
+  border: 1px solid white;
+  border-radius: 4px;
+  width: 20px;
+  height: 30px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.img-icon {
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 4px;
+  width: 20px;
+  height: 30px;
+  margin-top: 5px;
+  padding: 0px;
+}
+
+.table td:last-child{
+  /* background-color: black; */
+  background-color: white;
 }
