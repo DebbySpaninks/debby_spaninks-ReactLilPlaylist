@@ -64,3 +64,11 @@ tr:nth-child(odd) td {
 tr:nth-child(even) td {
   background: rgb(197, 184, 221);
 }
+
+.icon {
+  background-color: white;
+  order: 2;
+  width: 18px;
+  height: 18px;
+  padding-top: 4px;
+}
