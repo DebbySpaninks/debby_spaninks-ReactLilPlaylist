@@ -6,6 +6,7 @@ function SongForm({ addSong }) {
     const [artist, setArtist] = useState('');
     const [genre, setGenre] = useState('');
     const [rating, setRating] = useState('');
+    // add sort, setSort = useState
 
     // function to handle submit
     const handleSubmit = event => {
