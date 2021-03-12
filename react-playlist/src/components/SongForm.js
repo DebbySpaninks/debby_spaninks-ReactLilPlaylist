@@ -16,7 +16,6 @@ function SongForm({ addSong }) {
 
     return (
         <form className="form" onSubmit={event => { handleSubmit(event) }}>
-            <h2>header SongForm</h2>
             {/* input for TITLE */}
             <input
                 name="title"

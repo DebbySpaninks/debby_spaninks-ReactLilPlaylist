@@ -8,15 +8,16 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-size: 35px;
-  color: white;
+  font-size: 2em;
+  color: rgb(250, 250, 250);
+}
+
+.form {
+  margin: 30px 0px 40px;
 }
 
 .form input,
 .form select {
-  /* padding-left: 25px; */
-  padding-right: 0;
-  width: 230px;
   background-color: white;
   border: 1px solid lightgray;
 }
@@ -24,9 +25,9 @@
 .input-primary,
 .select-primary,
 button {
-  /* width: 200px; */
+  width: 200px;
   color: rgb(0, 0, 0);
-  padding: 14px 20px;
+  padding: 14px 12px;
   margin: 20px 0;
   border: 1px solid rgb(100, 99, 99);
   border-radius: 4px;
@@ -40,15 +41,22 @@ button {
   width: 230px;
 }
 
-.table-data {
-  font-size: 20px;
+table {
+  font-size: 1.5em;
+}
+ 
+td {
+  width: 200px;
+  font-size: 0.8em;
   padding: 15px;
-  background: rgb(217, 205, 240);
-  list-style: none;
-  margin: 5px;
+  background: rgb(56, 22, 119);
   color: black;
 }
 
-.table-data:nth-child(odd) {
-  background: rgb(157, 138, 192);
+tr:nth-child(odd) td {
+  background: rgb(150, 124, 199);
+}
+
+tr:nth-child(even) td {
+  background: rgb(197, 184, 221);
 }
