@@ -3,10 +3,10 @@ import React from 'react';
 // function to display table headers
 function TableHeader(props) {
 
-// create function to sort songs array.sort
-// sort on title a-z and z-a (capitalize??)
-// sort on artist a-z and z-a (capitalize??)
-// sort rating stars 1-5 and 5-1
+    // create function to sort songs array.sort
+    // sort on title a-z and z-a (capitalize??)
+    // sort on artist a-z and z-a (capitalize??)
+    // sort rating stars 1-5 and 5-1
 
     return (
         <thead>

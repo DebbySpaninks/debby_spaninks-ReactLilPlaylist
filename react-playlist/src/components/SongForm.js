@@ -8,7 +8,7 @@ function SongForm({ addSong }) {
     const [rating, setRating] = useState('');
     // add sort, setSort = useState
 
-    // function to add songs after click event
+    // function to add songs after onChange event
     const handleSubmit = e => {
         e.preventDefault();
         // create unique id for added songs

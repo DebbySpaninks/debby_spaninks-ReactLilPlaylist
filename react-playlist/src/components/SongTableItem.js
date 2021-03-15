@@ -1,19 +1,18 @@
 import TrashIcon from './trash.svg';
 
-const SongTableItem = ({ currentValue, deleteSong, id, title, artist, genre, rating}) => {
-    // const {title, artist, genre, rating } = currentValue;
+// function with parameters (SongTable) to display table data and delete after onClick
+const SongTableItem = ({ currentValue, deleteSong, id, title, artist, genre, rating }) => {
     return (
         <tr
             song={currentValue}
             key={id}
-            onClick={deleteSong}
             id={id}>
             {/* display table data objects*/}
             <td>{title}</td>
             <td>{artist}</td>
             <td>{genre}</td>
             <td>{rating}</td>
-            {/* display trash icon with onClick function to delete table data objects */}
+            {/* display trash icon with onClick function to delete table data */}
             <td className="td-icon">
                 <img
                     src={TrashIcon}
