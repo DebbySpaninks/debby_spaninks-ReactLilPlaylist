@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import SongForm from '../components/SongForm';
 import SongTable from '../components/SongTable';
-import FilterSong from '../components/FilterSong';
 
 // function that manage useState from songs 
 function SongOverview() {
@@ -24,7 +23,6 @@ function SongOverview() {
         <div>
             {/* display SongForm and SongTable */}
             <SongForm addSong={addSong} />
-            <FilterSong />
             <SongTable songs={songs} deleteSong={deleteSong} />
         </div>
     );
