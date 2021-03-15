@@ -50,6 +50,12 @@ table {
   width: 160px;
 }
 
+hr {
+  width: 60em;
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+
 tr.radio-buttons td.empty-td {
   background-color: white;
   padding-bottom: 0.8em;

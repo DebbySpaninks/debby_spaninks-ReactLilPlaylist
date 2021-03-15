@@ -2,6 +2,38 @@ import React from 'react';
 
 // function to display radio buttons with genre labels
 const FilterGenre = () => {
+    // function to target songs after click genre (radiobuttons)
+    const handleChangeEvent = e => {
+        switch (e.target.value) {
+            case 'pop':
+                document.write('this is the Pop genre');
+                // filterSongs('Pop');
+                break;
+            case 'nederpop':
+                document.write('this is the Nederpop genre');
+                // filterSongs('Nederpop');
+                break;
+            case 'hiprap':
+                document.write('this is the Hiphop Rap genre');
+                // filterSongs('Hiphop Rap');
+                break;
+            default:
+                document.write('There are no songs available that match the genre you have selected');
+                break;
+        }
+    };
+
+    // add eventListener on radiobuttons
+    const addEventOnRadioButtons = document.getElementsByName('filter');
+    addEventOnRadioButtons.forEach(radio => radio.addEventListener('change', handleChangeEvent));
+
+    // function to filter word in songTitle
+    // const filterSongs = (wordInSongTitle) => {
+    //     genreTitle(wordInSongTitle);                    deze niet gebruiken!!
+    //     const filteredSongs = movies.filter(movie => movie.Title.includes(wordInSongTitle));
+    //     addSongsToDom(filteredSongs);      was: addMoviesToDom
+    // };
+
     return (
         <tr class="radio-buttons">
             {/* create empty td's, now radiobuttons and labels right above Genre */}
