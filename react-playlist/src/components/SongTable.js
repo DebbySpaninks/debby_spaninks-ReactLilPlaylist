@@ -11,6 +11,7 @@ function SongTable(props) {
                 <tbody>
                     {/* manage currentValue from added songs (SongOverview)*/}
                     {props.songs.map(currentValue => {
+                        // return component (SongTableItem) 
                         return <SongTableItem
                             key={currentValue.id}
                             title={currentValue.title}
