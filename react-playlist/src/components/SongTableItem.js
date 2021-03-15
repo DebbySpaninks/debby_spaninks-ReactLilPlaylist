@@ -1,3 +1,4 @@
+import React from 'react';
 import TrashIcon from './trash.svg';
 
 // function with parameters (SongTable) to display table data and delete after onClick
