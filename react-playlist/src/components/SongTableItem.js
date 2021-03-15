@@ -7,7 +7,7 @@ const SongTableItem = ({ currentValue, deleteSong, id, title, artist, genre, rat
             song={currentValue}
             key={id}
             id={id}>
-            {/* display table data objects*/}
+            {/* display table data*/}
             <td>{title}</td>
             <td>{artist}</td>
             <td>{genre}</td>
