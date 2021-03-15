@@ -1,8 +1,10 @@
 import React from 'react';
 
+// function to display radio buttons with genre labels
 const FilterGenre = () => {
     return (
         <tr class="radio-buttons">
+            {/* create empty td's, now radiobuttons and labels right above Genre */}
             <td class="empty-td"></td>
             <td class="empty-td"></td>
             <td>
