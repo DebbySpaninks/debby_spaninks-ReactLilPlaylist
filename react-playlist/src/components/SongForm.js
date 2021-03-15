@@ -8,17 +8,17 @@ function SongForm({ addSong }) {
     const [rating, setRating] = useState('');
     // add sort, setSort = useState
 
-    // function to handle submit
-    const handleSubmit = event => {
+    // function to add songs after click event
+    const handleSubmit = e => {
+        e.preventDefault();
         // create unique id for added songs
         const id = Math.random().toString(16).slice(2);
-        // after submit add input (objects) to addSong
-        addSong({title: title, artist: artist, genre: genre, rating: rating, id: id});
-        event.preventDefault();
+        // after submit(click) add input (objects) to addSong
+        addSong({ title: title, artist: artist, genre: genre, rating: rating, id: id });
     }
 
     return (
-        <form className="form" onSubmit={event => { handleSubmit(event) }}>
+        <form className="form" onSubmit={e => { handleSubmit(e) }}>
             {/* input for TITLE */}
             <input
                 name="title"
@@ -26,7 +26,7 @@ function SongForm({ addSong }) {
                 value={title}
                 placeholder="Title"
                 className="input-primary"
-                onChange={event => setTitle(event.target.value)}
+                onChange={e => setTitle(e.target.value)}
             />
             {/* input for ARTIST */}
             <input
@@ -35,14 +35,14 @@ function SongForm({ addSong }) {
                 value={artist}
                 placeholder="Artist"
                 className="input-primary"
-                onChange={event => setArtist(event.target.value)}
+                onChange={e => setArtist(e.target.value)}
             />
             {/* select options for GENRE */}
             <select
                 name="genre"
                 value={genre}
                 className="select-primary"
-                onChange={event => setGenre(event.target.value)}
+                onChange={e => setGenre(e.target.value)}
             >
                 <option value="">Genre</option>
                 <option value="Pop">Pop</option>
@@ -55,7 +55,7 @@ function SongForm({ addSong }) {
                 type="number"
                 value={rating}
                 className="select-primary"
-                onChange={event => setRating(event.target.value)}
+                onChange={e => setRating(e.target.value)}
             >
                 <option value="">Rating</option>
                 <option value="1">1</option>
@@ -68,7 +68,7 @@ function SongForm({ addSong }) {
             <button
                 className='submit-button'
                 type='submit'>
-                    Add song
+                Add song
             </button>
         </form>
     );
