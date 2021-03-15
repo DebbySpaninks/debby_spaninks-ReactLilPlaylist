@@ -42,22 +42,22 @@ button {
 }
 
 table {
-  font-size: 2em;
-  margin-left: 20px;
+  margin-left: 25px;
 }
- 
-.table-header th {
-  width: 160px;                         
-}
-/*   geen flex gebruiken, gaat niet samen met table !!!!    width aanpassen ????? */
 
-th, td {
+.table-header th {
+  font-size: 1.5em;
+  width: 160px;
+}
+
+td {
   width: 180px;
-  font-size: 0.8em;
-  padding: 15px;
-  margin-left: 30px;
-  /* background: rgb(56, 22, 119); */
+  font-size: 1em;
   color: black;
+}
+
+tr td {
+  height: 33px;
 }
 
 tr:nth-child(odd) td {
@@ -69,26 +69,16 @@ tr:nth-child(even) td {
 }
 
 .td-icon {
-  background-color: white;
-  border: 1px solid white;
-  border-radius: 4px;
   width: 20px;
-  height: 30px;
-  margin: 0px;
   padding: 0px;
+  cursor: pointer;
 }
 
 .img-icon {
-  background-color: white;
-  border: 1px solid white;
-  border-radius: 4px;
   width: 20px;
-  height: 30px;
   margin-top: 5px;
-  padding: 0px;
 }
 
-.table td:last-child{
-  /* background-color: black; */
+.table td:last-child {
   background-color: white;
 }
