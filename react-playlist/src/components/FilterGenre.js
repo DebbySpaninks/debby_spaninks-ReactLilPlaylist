@@ -34,6 +34,10 @@ const FilterGenre = () => {
     //     addSongsToDom(filteredSongs);      was: addMoviesToDom
     // };
 
+
+
+//  make new file to split the handleChangeEvent from the radiobuttons!!!!!!!!!!!!!!!!!!!!
+
     return (
         <tr class="radio-buttons">
             {/* create empty td's, now radiobuttons and labels right above Genre */}
