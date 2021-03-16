@@ -33,6 +33,7 @@ function SongOverview() {
         let songItems = [...songs, song];
         setSongs(songItems);
     };
+    
     // function that delete song (useState, setSongs)
     const deleteSong = id => {
         let deletedSong = songs.filter(song => {

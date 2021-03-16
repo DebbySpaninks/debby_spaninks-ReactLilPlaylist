@@ -11,18 +11,18 @@ function SongTable(props) {
                 <TableHeader />
                 <tbody>
                     <FilterCheckbox />
-                    {/* manage currentValue from added songs (SongOverview)*/}
-                    {props.songs.map(currentValue => {
+                    {/* manage song (currentvalue) from added songs (SongOverview)*/}
+                    {props.songs.map(song => {
                         // return component (SongTableItem) 
                         return <SongTableItem
-                            key={currentValue.id}
-                            title={currentValue.title}
-                            artist={currentValue.artist}
-                            genre={currentValue.genre}
-                            rating={currentValue.rating}
+                            key={song.id}
+                            title={song.title}
+                            artist={song.artist}
+                            genre={song.genre}
+                            rating={song.rating}
                             // deleteSong recives props from SongOverview
                             deleteSong={props.deleteSong}
-                            id={currentValue.id} />
+                            id={song.id} />
                     })}
                 </tbody>
             </table>

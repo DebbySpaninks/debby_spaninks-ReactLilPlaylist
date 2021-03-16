@@ -2,10 +2,10 @@ import React from 'react';
 import TrashIcon from './trash.svg';
 
 // function with parameters (SongTable) to display table data and delete after onClick
-const SongTableItem = ({ currentValue, deleteSong, id, title, artist, genre, rating }) => {
+const SongTableItem = ({ song, deleteSong, id, title, artist, genre, rating }) => {
     return (
         <tr
-            song={currentValue}
+            song={song}
             key={id}
             id={id}>
             {/* display table data*/}
