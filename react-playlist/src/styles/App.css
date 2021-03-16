@@ -56,7 +56,7 @@ hr {
   margin-bottom: 1em;
 }
 
-tr.radio-buttons td.empty-td {
+tr.checkbox td.empty-td {
   background-color: white;
   padding-bottom: 0.8em;
 }

@@ -1,8 +1,8 @@
 import React from 'react';
 
-// function to display radio buttons with genre labels
+// function to filter genre
 const FilterGenre = () => {
-    // function to target songs after click genre (radiobuttons)
+    // function to target songs after click genre (checkbox)
     const handleChangeEvent = e => {
         switch (e.target.value) {
             case 'pop':
@@ -23,52 +23,14 @@ const FilterGenre = () => {
         }
     };
 
-    // add eventListener on radiobuttons
-    const addEventOnRadioButtons = document.getElementsByName('filter');
-    addEventOnRadioButtons.forEach(radio => radio.addEventListener('change', handleChangeEvent));
-
-    // function to filter word in songTitle
-    // const filterSongs = (wordInSongTitle) => {
-    //     genreTitle(wordInSongTitle);                    deze niet gebruiken!!
-    //     const filteredSongs = movies.filter(movie => movie.Title.includes(wordInSongTitle));
-    //     addSongsToDom(filteredSongs);      was: addMoviesToDom
-    // };
-
-
-
-//  make new file to split the handleChangeEvent from the radiobuttons!!!!!!!!!!!!!!!!!!!!
+    // add eventListener on checkbox
+    const addEventOnCheckbox = document.getElementsByName('checkbox');
+    addEventOnCheckbox.forEach(check => check.addEventListener('change', handleChangeEvent));
 
     return (
-        <tr class="radio-buttons">
-            {/* create empty td's, now radiobuttons and labels right above Genre */}
-            <td class="empty-td"></td>
-            <td class="empty-td"></td>
-            <td>
-                <input
-                    type="radio"
-                    id="genre-pop"
-                    name="filter"
-                    value="pop"
-                />
-                <label class="filter-label" for="genre-pop">Pop</label>
-
-                <input
-                    type="radio"
-                    id="genre-nederpop"
-                    name="filter"
-                    value="nederpop"
-                />
-                <label class="filter-label" for="genre-nederpop">Nederpop</label>
-
-                <input
-                    type="radio"
-                    id="genre-hiprap"
-                    name="filter"
-                    value="hiprap"
-                />
-                <label class="filter-label" for="genre-hiprap">Hiphop Rap</label>
-            </td>
-        </tr>
+        <div>
+            <h6> </h6>
+        </div>
     )
 }
 
