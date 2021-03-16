@@ -26,6 +26,6 @@ function SongOverview() {
             <SongTable songs={songs} deleteSong={deleteSong} />
         </div>
     );
-}
+};
 
 export default SongOverview;

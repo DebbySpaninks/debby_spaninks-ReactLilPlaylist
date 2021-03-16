@@ -1,5 +1,5 @@
 import React from 'react';
-import FilterGenre from './FilterGenre';
+import FilterGenre from '../filter/FilterGenre';
 
 // function to display table headers and component FilterGenre
 function TableHeader() {

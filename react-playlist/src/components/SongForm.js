@@ -15,7 +15,7 @@ function SongForm({ addSong }) {
         const id = Math.random().toString(16).slice(2);
         // after submit(click) add input (objects) to addSong
         addSong({ title: title, artist: artist, genre: genre, rating: rating, id: id });
-    }
+    };
 
     return (
         <form className="form" onSubmit={e => { handleSubmit(e) }}>
@@ -72,6 +72,6 @@ function SongForm({ addSong }) {
             </button>
         </form>
     );
-}
+};
 
 export default SongForm;

@@ -1,7 +1,7 @@
 import React from 'react';
 
 // function to display checkbox with genre labels
-const InputCheckbox = () => {
+const FilterCheckbox = () => {
     return (
         <tr class="checkbox">
             {/* create empty td's, now checkbox and labels right above Genre */}
@@ -36,4 +36,4 @@ const InputCheckbox = () => {
     )
 }
 
-export default InputCheckbox;
+export default FilterCheckbox;

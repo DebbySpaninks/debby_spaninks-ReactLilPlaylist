@@ -1,7 +1,7 @@
 import React from 'react';
 import TableHeader from './TableHeader';
+import FilterCheckbox from '../filter/FilterCheckbox';
 import SongTableItem from './SongTableItem';
-import InputCheckbox from './InputCheckbox'
 
 // function to display TableHeader and SongTableItem
 function SongTable(props) {
@@ -10,7 +10,7 @@ function SongTable(props) {
             <table className="table" style={{ width: "98%" }}>
                 <TableHeader />
                 <tbody>
-                    <InputCheckbox />
+                    <FilterCheckbox />
                     {/* manage currentValue from added songs (SongOverview)*/}
                     {props.songs.map(currentValue => {
                         // return component (SongTableItem) 
