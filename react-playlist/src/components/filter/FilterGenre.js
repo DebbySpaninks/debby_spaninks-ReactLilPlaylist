@@ -1,7 +1,7 @@
 import React from 'react';
 
 // function to filter genre
-const FilterGenre = () => {
+const FilterGenre = (props) => {
     // function to target songs after click genre (checkbox)
     const handleChangeEvent = e => {
         switch (e.target.value) {
@@ -29,7 +29,7 @@ const FilterGenre = () => {
 
     return (
         <div>
-            <h6> </h6>
+            <h6> filter genre </h6>
         </div>
     )
 }

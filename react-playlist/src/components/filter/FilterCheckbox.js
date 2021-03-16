@@ -15,7 +15,7 @@ const FilterCheckbox = () => {
             setCheckedGenre({
                 [name]: value
             })
-    }
+    };
 
     return (
         <tr class="checkbox">
@@ -25,29 +25,30 @@ const FilterCheckbox = () => {
             <td>
                 <input
                     type="checkbox"
-                    id="genre-pop"
+                    // id="genre-pop"
                     name="pop"
                     value="pop"
                     checked={checkedGenre.value}
-                    onChange={(e) => { setCheckedGenre(e.target.value) }} />
+                    onChange={handleChange} />
                 <label class="filter-label" for="genre-pop">Pop</label>
 
                 <input
                     type="checkbox"
-                    id="genre-nederpop"
+                    // id="genre-nederpop"
                     name="nederpop"
                     value="nederpop"
                     checked={checkedGenre.value}
-                    onChange={(e) => { setCheckedGenre(e.target.value) }} />
+                    onChange={handleChange} />
                 <label class="filter-label" for="genre-nederpop">Nederpop</label>
 
                 <input
                     type="checkbox"
-                    id="genre-hiprap"
+                    // id="genre-hiprap"                  nog nodig???? anders bij alle checkboxen verwijderen!!!!
                     name="hiprap"
                     value="hiprap"
                     checked={checkedGenre.value}
                     onChange={handleChange} />
+                {/*                                    for="      " nog nodig anders bij alle labels verwijderen!!! */}
                 <label class="filter-label" for="genre-hiprap">Hiphop Rap</label>
             </td>
         </tr>
