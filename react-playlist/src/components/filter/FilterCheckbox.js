@@ -11,7 +11,7 @@ const FilterCheckbox = () => {
                 <input
                     type="checkbox"
                     id="genre-pop"
-                    name="check"
+                    name="filter"
                     value="pop"
                 />
                 <label class="filter-label" for="genre-pop">Pop</label>
@@ -19,7 +19,7 @@ const FilterCheckbox = () => {
                 <input
                     type="checkbox"
                     id="genre-nederpop"
-                    name="check"
+                    name="filter"
                     value="nederpop"
                 />
                 <label class="filter-label" for="genre-nederpop">Nederpop</label>
@@ -27,13 +27,13 @@ const FilterCheckbox = () => {
                 <input
                     type="checkbox"
                     id="genre-hiprap"
-                    name="check"
+                    name="filter"
                     value="hiprap"
                 />
                 <label class="filter-label" for="genre-hiprap">Hiphop Rap</label>
             </td>
         </tr>
-    )
-}
+    );
+};
 
 export default FilterCheckbox;

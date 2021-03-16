@@ -18,6 +18,7 @@ function SongTable(props) {
                             key={currentValue.id}
                             title={currentValue.title}
                             artist={currentValue.artist}
+                            genre={currentValue.genre}
                             rating={currentValue.rating}
                             // deleteSong recives props from SongOverview
                             deleteSong={props.deleteSong}
