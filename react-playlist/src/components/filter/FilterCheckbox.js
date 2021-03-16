@@ -1,7 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 // function to display checkbox with genre labels
 const FilterCheckbox = () => {
+    const [checkedGenre, setCheckedGenre] = useState(false);
+
+    // function to display check after click checkbox
+    const handleChange = e => {
+        const { name, value, type, checked } = e.target
+        type === "checkbox" ?
+            setCheckedGenre({
+                [name]: checked
+            })
+            :
+            setCheckedGenre({
+                [name]: value
+            })
+    }
+
     return (
         <tr class="checkbox">
             {/* create empty td's, now checkbox and labels right above Genre */}
@@ -11,25 +26,28 @@ const FilterCheckbox = () => {
                 <input
                     type="checkbox"
                     id="genre-pop"
-                    name="filter"
+                    name="pop"
                     value="pop"
-                />
+                    checked={checkedGenre.value}
+                    onChange={(e) => { setCheckedGenre(e.target.value) }} />
                 <label class="filter-label" for="genre-pop">Pop</label>
 
                 <input
                     type="checkbox"
                     id="genre-nederpop"
-                    name="filter"
+                    name="nederpop"
                     value="nederpop"
-                />
+                    checked={checkedGenre.value}
+                    onChange={(e) => { setCheckedGenre(e.target.value) }} />
                 <label class="filter-label" for="genre-nederpop">Nederpop</label>
 
                 <input
                     type="checkbox"
                     id="genre-hiprap"
-                    name="filter"
+                    name="hiprap"
                     value="hiprap"
-                />
+                    checked={checkedGenre.value}
+                    onChange={handleChange} />
                 <label class="filter-label" for="genre-hiprap">Hiphop Rap</label>
             </td>
         </tr>

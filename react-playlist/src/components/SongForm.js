@@ -10,6 +10,7 @@ function SongForm({ addSong }) {
 
     // function to add songs after onChange event
     const handleSubmit = e => {
+        // prevents the browsers default behaviour
         e.preventDefault();
         // create unique id for added songs
         const id = Math.random().toString(16).slice(2);
