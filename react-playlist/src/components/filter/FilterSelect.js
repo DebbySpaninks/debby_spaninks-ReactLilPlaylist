@@ -13,15 +13,15 @@ const FilterSelect = () => {
     }
 
     return (
-        <tr className="filter-select-row">
+        <tr className="filter">
             {/* create empty td's, now select is right above Genre */}
-            <td className="empty-td"></td>
-            <td className="empty-td"></td>
-            <td>
+            <td className="white-td"></td>
+            <td className="white-td"></td>
+            <td className="white-td">
                 <select
                     name="genre"
                     value={selectGenre}
-                    className="filter-select"
+                    className="select-filter"
                     onChange={handleChange}
                 >
                     <option value="">Genre</option>
@@ -30,12 +30,12 @@ const FilterSelect = () => {
                     <option value="HiphopRap">Hiphop Rap</option>
                 </select>
             </td>
-            <td>
+            <td className="white-td">
                 <select
                     name="rating"
                     type="number"
                     value={selectRating}
-                    className="filter-select"
+                    className="select-filter"
                     // onChange={e => setRating(e.target.value)}
                 >
                     <option value="">Rating</option>
