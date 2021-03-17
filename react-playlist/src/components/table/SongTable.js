@@ -1,6 +1,6 @@
 import React from 'react';
 import TableHeader from './TableHeader';
-import FilterGenre from '../filter/FilterGenre'
+import FilterSelect from '../filter/FilterSelect';
 import SongTableItem from './SongTableItem';
 
 // function to display TableHeader and SongTableItem
@@ -10,7 +10,7 @@ function SongTable(props) {
             <table className="table" style={{ width: "98%" }}>
                 <TableHeader />
                 <tbody>
-                    <FilterGenre />
+                    <FilterSelect />
                     {/* manage song (currentvalue) from added songs (SongOverview)*/}
                     {props.songs.map(song => {
                         // return component (SongTableItem) 

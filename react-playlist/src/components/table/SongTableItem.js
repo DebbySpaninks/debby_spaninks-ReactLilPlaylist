@@ -18,7 +18,7 @@ const SongTableItem = ({ song, deleteSong, id, title, artist, genre, rating }) =
                 <img
                     src={TrashIcon}
                     alt="trash icon"
-                    class="img-icon"
+                    className="img-icon"
                     onClick={() => deleteSong(id)}
                 /></td>
         </tr>
