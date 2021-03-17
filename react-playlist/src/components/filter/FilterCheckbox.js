@@ -43,12 +43,11 @@ const FilterCheckbox = () => {
 
                 <input
                     type="checkbox"
-                    // id="genre-hiprap"                  nog nodig???? anders bij alle checkboxen verwijderen!!!!
+                    // id="genre-hiprap"
                     name="hiprap"
                     value="hiprap"
                     checked={checkedGenre.value}
                     onChange={handleChange} />
-                {/*                                    for="      " nog nodig anders bij alle labels verwijderen!!! */}
                 <label class="filter-label" for="genre-hiprap">Hiphop Rap</label>
             </td>
         </tr>
