@@ -1,3 +1,5 @@
+/* tables are not the same width, before the new select filters they had the same width !!!!!!!!! */
+
 .App {
   text-align: center;
 }
@@ -8,27 +10,21 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-size: 2.6em;
+  font-size: 2.2em;
   color: rgb(250, 250, 250);
 }
 
 .form {
-  margin: 30px 0px 40px;
-}
-
-.form input,
-.form select {
-  background-color: white;
-  border: 1px solid lightgray;
+  margin: 30px 0px 45px;
 }
 
 ::placeholder {
   color: rgb(0, 0, 0);
 }
 
+button,
 .input-primary,
-.select-primary,
-button {
+.select-primary {
   width: 200px;
   padding: 14px 12px;
   margin: 20px 0;
@@ -38,10 +34,24 @@ button {
   margin-left: 10px;
 }
 
+button,
 .select-primary,
-button {
+.filter select {
   cursor: pointer;
   width: 230px;
+}
+
+.form input,
+.form select,
+.filter select {
+  background-color: white;
+  border: 1px solid lightgray;
+}
+
+.filter select {
+  margin: 0;
+  padding: 5px;
+  border-radius: 4px;
 }
 
 table {
@@ -53,36 +63,25 @@ table {
   width: 160px;
 }
 
-hr {
-  width: 60em;
-  margin-top: 2em;
-  margin-bottom: 1em;
-}
-
-tr.filter-select-row td.empty-td, tr.filter-select-row td.filter-select {
+tr.filter td.white-td {
   background-color: white;
-  padding-bottom: 0.8em;
 }
-
-/* label.filter-label {
-  padding-right: 0.7em;
-} */
 
 td {
   width: 180px;
-  font-size: 1em;
+  font-size: 1.03em;
   color: black;
 }
 
 tr td {
-  height: 33px;
-}
-
-tr:nth-child(odd) td {
-  background: rgb(150, 124, 199);
+  height: 40px;
 }
 
 tr:nth-child(even) td {
+  background: rgb(150, 124, 199);
+}
+
+tr:nth-child(odd) td {
   background: rgb(197, 184, 221);
 }
 
@@ -93,7 +92,7 @@ tr:nth-child(even) td {
 }
 
 .img-icon {
-  width: 20px;
+  width: 19px;
   margin-top: 5px;
 }
 
