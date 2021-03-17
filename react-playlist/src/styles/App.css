@@ -59,14 +59,14 @@ hr {
   margin-bottom: 1em;
 }
 
-tr.checkbox td.empty-td {
+tr.filter-select-row td.empty-td, tr.filter-select-row td.filter-select {
   background-color: white;
   padding-bottom: 0.8em;
 }
 
-label.filter-label {
+/* label.filter-label {
   padding-right: 0.7em;
-}
+} */
 
 td {
   width: 180px;
