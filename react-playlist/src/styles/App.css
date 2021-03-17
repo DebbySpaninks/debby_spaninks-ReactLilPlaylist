@@ -22,11 +22,14 @@
   border: 1px solid lightgray;
 }
 
+::placeholder {
+  color: rgb(0, 0, 0);
+}
+
 .input-primary,
 .select-primary,
 button {
   width: 200px;
-  color: rgb(0, 0, 0);
   padding: 14px 12px;
   margin: 20px 0;
   border: 1px solid rgb(100, 99, 99);
@@ -56,7 +59,7 @@ hr {
   margin-bottom: 1em;
 }
 
-tr.radio-buttons td.empty-td {
+tr.checkbox td.empty-td {
   background-color: white;
   padding-bottom: 0.8em;
 }

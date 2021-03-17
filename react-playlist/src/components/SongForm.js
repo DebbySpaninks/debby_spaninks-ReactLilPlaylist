@@ -10,15 +10,16 @@ function SongForm({ addSong }) {
 
     // function to add songs after onChange event
     const handleSubmit = e => {
+        // prevents the browsers default behaviour
         e.preventDefault();
         // create unique id for added songs
         const id = Math.random().toString(16).slice(2);
         // after submit(click) add input (objects) to addSong
         addSong({ title: title, artist: artist, genre: genre, rating: rating, id: id });
-    }
+    };
 
     return (
-        <form className="form" onSubmit={e => { handleSubmit(e) }}>
+        <form className="form" onSubmit={handleSubmit}>
             {/* input for TITLE */}
             <input
                 name="title"
@@ -72,6 +73,6 @@ function SongForm({ addSong }) {
             </button>
         </form>
     );
-}
+};
 
 export default SongForm;

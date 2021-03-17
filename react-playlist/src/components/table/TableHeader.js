@@ -1,7 +1,6 @@
 import React from 'react';
-import FilterGenre from './FilterGenre';
 
-// function to display table headers and component FilterGenre
+// function to display table headers
 function TableHeader() {
 
     // create function to sort songs array.sort
@@ -11,8 +10,6 @@ function TableHeader() {
 
     return (
         <thead>
-            {/* component to display radiobuttons to filter songs by genre */}
-            <FilterGenre />
             <tr className="table-header">
                 {/* create sort button (in th) for title */}
                 <th>Title</th>
