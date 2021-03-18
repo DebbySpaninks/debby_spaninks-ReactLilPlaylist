@@ -25,9 +25,12 @@ function SongOverview() {
     };
 
     // function that filter select genre (useState, setSongs)
-    const filterGenre = id => {
+    const filterGenre = genre => {
         let filteredGenre = songs.filter(song => {
-            return song.genre === id;
+            console.log('filterGenre werkt!')
+
+            // deze funtie klopt nog niet!!!!!!!!!!!
+            return song.genre === genre;
         });
         setSongs(filteredGenre);
     };
