@@ -2,6 +2,7 @@
 
 .App {
   text-align: center;
+  font-family: Verdana, Tahoma, sans-serif;
 }
 
 .header {
@@ -10,9 +11,9 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-size: 2.2em;
+  font-size: 2.5em;
   color: rgb(250, 250, 250);
-    font-family: Verdana, Tahoma, sans-serif;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .form {
@@ -53,6 +54,12 @@ button,
   margin: 0;
   padding: 5px;
   border-radius: 4px;
+  font-size: 0.85em;
+}
+
+input, 
+button {
+  font-size: 1.1em;
 }
 
 table {
@@ -60,7 +67,8 @@ table {
 }
 
 .table-header th {
-  font-size: 1.7em;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 2.1em;
   width: 160px;
 }
 
@@ -70,7 +78,7 @@ tr.filter td.white-td {
 
 td {
   width: 180px;
-  font-size: 1.03em;
+  font-size: 1.2em;
   color: black;
 }
 
