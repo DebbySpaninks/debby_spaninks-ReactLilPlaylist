@@ -24,11 +24,22 @@ function SongOverview() {
         setSongs(deletedSong);
     };
 
+    // function that filter select genre (useState, setSongs)
+    const filterGenre = genre => {
+        let filteredGenre = songs.filter(song => {
+            console.log('filterGenre werkt!')
+
+            // deze funtie klopt nog niet!!!!!!!!!!!
+            return song.genre === genre;
+        });
+        setSongs(filteredGenre);
+    };
+
     return (
         <div>
             {/* display SongForm and SongTable */}
             <SongForm addSong={addSong} />
-            <SongTable songs={songs} deleteSong={deleteSong} />
+            <SongTable songs={songs} deleteSong={deleteSong} filterGenre={filterGenre} />
         </div>
     );
 };

@@ -10,7 +10,7 @@ function SongTable(props) {
             <table className="table" style={{ width: "98%" }}>
                 <TableHeader />
                 <tbody>
-                    <FilterSelect />
+                   <FilterSelect />
                     {/* manage song (currentvalue) from added songs (SongOverview)*/}
                     {props.songs.map(song => {
                         // return component (SongTableItem) 
@@ -22,6 +22,7 @@ function SongTable(props) {
                             rating={song.rating}
                             // deleteSong recives props from SongOverview
                             deleteSong={props.deleteSong}
+                            filterGenre={props.filterGenre}
                             id={song.id} />
                     })}
                 </tbody>
