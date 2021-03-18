@@ -10,7 +10,8 @@ function SongTable(props) {
             <table className="table" style={{ width: "98%" }}>
                 <TableHeader />
                 <tbody>
-                    <FilterSelect />
+                    {/* filterGenre recives props from SongOverview */}
+                    <FilterSelect filterGenre={props.filterGenre}/>
                     {/* manage song (currentvalue) from added songs (SongOverview)*/}
                     {props.songs.map(song => {
                         // return component (SongTableItem) 

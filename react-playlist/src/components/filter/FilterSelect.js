@@ -1,16 +1,47 @@
 import React, { useState } from 'react';
 
 // function to filter genre                naam van functie nog aanpassen en van component!!
-const FilterSelect = () => {
+function FilterSelect({ filterGenre }) {
     const [selectGenre, setSelectGenre] = useState('');
     const [selectRating, setSelectRating] = useState('');
 
-    function handleChange(e) {
-        console.log('handleChange is working')
-        // even onderstaand toegevoegd om errors eruit te halen
-        setSelectGenre()
-        setSelectRating()
-    }
+    // functie to select genre and log it
+    const handleSelectGenre = e => {
+        switch (e.target.value) {
+            case 'pop':
+            case 'nederpop':
+            case 'hiphoprap':
+                console.log('genre', {}, 'is geselecteerd');
+                // filterGenre({ genre: selectGenre, id: id });
+                break;
+            default:
+                console.log('no genres are selected');
+                break;
+        };
+        setSelectGenre();
+    };
+
+    // function to select rating and log it
+    const handleSelectRating = e => {
+        switch (e.target.value) {
+            case '1':
+            case '2':
+            case '3':
+            case '4':
+            case '5':
+                console.log('rating' , {}, 'is geselecteerd');
+                // filterRating('');
+                break;
+            default:
+                console.log('no ratings are selected');
+                break;
+        };
+        setSelectRating();
+    };
+
+    // handleChange or handleSubmit to return the array with filtered items
+    // in SongOverview staat functie om te filteren maar is nog niet meegegeven aan FilterSelect
+    // SongTable ontvangt props () van SongOverview
 
     return (
         <tr className="filter">
@@ -22,21 +53,20 @@ const FilterSelect = () => {
                     name="genre"
                     value={selectGenre}
                     className="select-filter"
-                    onChange={handleChange}
-                >
+                    onChange={handleSelectGenre}
+                    >
                     <option value="">Genre</option>
-                    <option value="Pop">Pop</option>
-                    <option value="Nederpop">Nederpop</option>
-                    <option value="HiphopRap">Hiphop Rap</option>
+                    <option value="pop">Pop</option>
+                    <option value="nederpop">Nederpop</option>
+                    <option value="hiphoprap">Hiphop Rap</option>
                 </select>
             </td>
             <td className="white-td">
                 <select
                     name="rating"
-                    type="number"
                     value={selectRating}
-                    className="select-filter"
-                    // onChange={e => setRating(e.target.value)}
+                    className="select-filter" 
+                    onChange={handleSelectRating}
                 >
                     <option value="">Rating</option>
                     <option value="1">1</option>
