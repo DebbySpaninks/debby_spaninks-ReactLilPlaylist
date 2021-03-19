@@ -24,22 +24,43 @@ function SongOverview() {
         setSongs(deletedSong);
     };
 
-    // function that filter select genre (useState, setSongs)
-    const filterGenre = genre => {
-        let filteredGenre = songs.filter(song => {
-            console.log('filterGenre werkt!')
 
-            // deze funtie klopt nog niet!!!!!!!!!!!
-            return song.genre === genre;
+    const sortTitle = () => {
+        console.log('sortTitle is working')
+        let sortedTitle = songs.sort((a, b) => {
+            console.log('sortedTitle is working')
+            return a.title.toLowerCase().localeCompare(b.title.toLowerCase())
         });
-        setSongs(filteredGenre);
+        setSongs(sortedTitle);
     };
+
+    const sortArtist = () => {
+        console.log('sortArtist is working')
+        let sortedArtist = songs.sort((a, b) => {
+            console.log('sortedArtist is working')
+            return a.artist.toLowerCase().localeCompare(b.artist.toLowerCase())
+        });
+        setSongs(sortedArtist);
+    };
+ 
+
+
+    // // function that filter select genre (useState, setSongs)
+    // const filterGenre = genre => {
+    //     let filteredGenre = songs.filter(song => {
+    //         console.log('filterGenre werkt!')
+
+    //         // deze funtie klopt nog niet!!!!!!!!!!!
+    //         return song.genre === genre;
+    //     });
+    //     setSongs(filteredGenre);
+    // };
 
     return (
         <div>
             {/* display SongForm and SongTable */}
             <SongForm addSong={addSong} />
-            <SongTable songs={songs} deleteSong={deleteSong} filterGenre={filterGenre} />
+            <SongTable songs={songs} deleteSong={deleteSong} sortTitle={sortTitle} sortArtist={sortArtist}  />
         </div>
     );
 };

@@ -8,7 +8,7 @@ function SongTable(props) {
     return (
         <div>
             <table className="table" style={{ width: "98%" }}>
-                <TableHeader />
+                <TableHeader sortTitle={props.sortTitle} sortArtist={props.sortArtist}/>
                 <tbody>
                    <FilterSelect />
                     {/* manage song (currentvalue) from added songs (SongOverview)*/}
@@ -22,7 +22,7 @@ function SongTable(props) {
                             rating={song.rating}
                             // deleteSong recives props from SongOverview
                             deleteSong={props.deleteSong}
-                            filterGenre={props.filterGenre}
+                            // filterGenre={props.filterGenre}
                             id={song.id} />
                     })}
                 </tbody>
