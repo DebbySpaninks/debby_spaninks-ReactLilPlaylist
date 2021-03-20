@@ -1,12 +1,12 @@
 import React from 'react';
-import TableHeader from './TableHeader';
 import FilterSelect from '../filter/FilterSelect';
 import useSortableData from './useSortableData';
 import SongTableItem from './SongTableItem';
+import ArrowIcon from './arrow-icon.png';
 
-// function to display TableHeader and SongTableItem
+// function to display SongTable with sort function (useSortableData)
 const SongTable = props => {
-    const {items, requestSort, sortConfig} = useSortableData(props.data);
+    const { items, requestSort, sortConfig } = useSortableData(props.data);
     const getClassNamesFor = name => {
         if (!sortConfig) {
             return;
@@ -17,31 +17,66 @@ const SongTable = props => {
     return (
         <div>
             <table className="table" style={{ width: "98%" }}>
-                <TableHeader sortTitle={props.sortTitle} sortArtist={props.sortArtist}/>
                 <thead>
                     <tr>
                         {/* after click on tablehead we update the field we want to sort */}
-                        <th><button type="button" onClick={() => requestSort('title')} className={getClassNamesFor('title')}>Title</button></th>
-                        <th><button type="button" onClick={() => requestSort('artist')} className={getClassNamesFor('artist')}>Artist</button></th>
-                        <th><button type="button" onClick={() => requestSort('genre')} className={getClassNamesFor('genre')}>Genre</button></th>
-                        <th><button type="button" onClick={() => requestSort('rating')} className={getClassNamesFor('rating')}>Rating</button></th>
+                        <th>
+                            <button type="button"
+                                onClick={() => requestSort('title')}
+                                className={getClassNamesFor('title')}>Title
+                                <img
+                                    src={ArrowIcon}
+                                    alt="arrow icon"
+                                    className="arrow-icon" />
+                            </button>
+                        </th>
+                        <th>
+                            <button type="button"
+                                onClick={() => requestSort('artist')}
+                                className={getClassNamesFor('artist')}>artist
+                                <img
+                                    src={ArrowIcon}
+                                    alt="arrow icon"
+                                    className="arrow-icon" />
+                            </button>
+                        </th>
+                        <th>
+                            <button type="button"
+                                onClick={() => requestSort('genre')}
+                                className={getClassNamesFor('genre')}>Genre
+                                <img
+                                    src={ArrowIcon}
+                                    alt="arrow icon"
+                                    className="arrow-icon" />
+                            </button>
+                        </th>
+                        <th>
+                            <button type="button"
+                                onClick={() => requestSort('rating')}
+                                className={getClassNamesFor('rating')}>rating
+                                <img
+                                    src={ArrowIcon}
+                                    alt="arrow icon"
+                                    className="arrow-icon" />
+                            </button>
+                        </th>
                     </tr>
                 </thead>
                 <tbody>
-                   <FilterSelect />
-                    {/* manage song (currentvalue) from added songs (SongOverview)*/}
-                    {props.songs.map(song => {
+                    <FilterSelect />
+                    {/* manage song (data) from added items */}
+                    {items.map(data => {
                         // return component (SongTableItem) 
                         return <SongTableItem
-                            key={song.id}
-                            title={song.title}
-                            artist={song.artist}
-                            genre={song.genre}
-                            rating={song.rating}
+                            key={data.id}
+                            title={data.title}
+                            artist={data.artist}
+                            genre={data.genre}
+                            rating={data.rating}
                             // deleteSong recives props from SongOverview
                             deleteSong={props.deleteSong}
                             // filterGenre={props.filterGenre}
-                            id={song.id} />
+                            id={data.id} />
                     })}
                 </tbody>
             </table>

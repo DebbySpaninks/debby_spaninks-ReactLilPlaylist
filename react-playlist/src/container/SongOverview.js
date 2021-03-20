@@ -25,23 +25,6 @@ function SongOverview() {
     };
 
 
-    const sortTitle = () => {
-        console.log('sortTitle is working')
-        let sortedTitle = songs.sort((a, b) => {
-            console.log('sortedTitle is working')
-            return a.title.toLowerCase().localeCompare(b.title.toLowerCase())
-        });
-        setSongs(sortedTitle);
-    };
-
-    const sortArtist = () => {
-        console.log('sortArtist is working')
-        let sortedArtist = songs.sort((a, b) => {
-            console.log('sortedArtist is working')
-            return a.artist.toLowerCase().localeCompare(b.artist.toLowerCase())
-        });
-        setSongs(sortedArtist);
-    };
  
 
 
@@ -60,11 +43,7 @@ function SongOverview() {
         <div>
             {/* display SongForm and SongTable */}
             <SongForm addSong={addSong} />
-            <SongTable songs={songs} deleteSong={deleteSong} sortTitle={sortTitle} sortArtist={sortArtist} data={[
-                { id: 1, title: "Onderweg", artist: "Abel", genre: "Nederpop", rating: 4 },
-                { id: 2, title: "Lose Yourself", artist: "Eminem", genre: "Hiphop Rap", rating: 3 },
-                { id: 3, title: "Domino", artist: "Jessie J", genre: "Pop", rating: 4 }
-            ]} />
+            <SongTable songs={songs} deleteSong={deleteSong} data={songs} />
         </div>
     );
 };

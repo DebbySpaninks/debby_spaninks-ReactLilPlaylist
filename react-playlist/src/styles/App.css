@@ -1,5 +1,3 @@
-/* tables are not the same width, before the new select filters they had the same width !!!!!!!!! */
-
 .App {
   text-align: center;
   font-family: Verdana, Tahoma, sans-serif;
@@ -13,7 +11,7 @@
   justify-content: center;
   font-size: 2.5em;
   color: rgb(250, 250, 250);
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .form {
@@ -57,7 +55,7 @@ button,
   font-size: 0.85em;
 }
 
-input, 
+input,
 button {
   font-size: 1.1em;
 }
@@ -66,24 +64,13 @@ table {
   margin-left: 25px;
 }
 
+/* .arrow-icon {
+} */
+
 .table-header th {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
   font-size: 2.1em;
   width: 160px;
-}
-
-/* hoog naar laag */
-thead button.ascending::after {
-  content: '👇';
-  display: inline-block;
-  margin-left: 1em;
-}
-
-/* laag naar hoog */
-thead button.descending::after {
-  content: '☝️';
-  display: inline-block;
-  margin-left: 1em;
 }
 
 tr.filter td.white-td {
