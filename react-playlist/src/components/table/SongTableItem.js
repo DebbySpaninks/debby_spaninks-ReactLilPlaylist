@@ -19,10 +19,10 @@ const SongTableItem = ({ data, deleteSong, filterGenre, id, title, artist, genre
                     src={TrashIcon}
                     alt="trash icon"
                     className="img-icon"
-                    onClick={() => deleteSong(id)}
-                /></td>
-                
-                {/* ik moet een onClick funtie voor filterGenre hebben zoals hier bij deletesong is gedaan */}
+                    onClick={() => deleteSong(id)} />
+            </td>
+
+            {/* ik moet een onClick funtie voor filterGenre hebben zoals hier bij deletesong is gedaan */}
         </tr>
     );
 };
