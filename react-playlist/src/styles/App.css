@@ -72,6 +72,20 @@ table {
   width: 160px;
 }
 
+/* hoog naar laag */
+thead button.ascending::after {
+  content: '👇';
+  display: inline-block;
+  margin-left: 1em;
+}
+
+/* laag naar hoog */
+thead button.descending::after {
+  content: '☝️';
+  display: inline-block;
+  margin-left: 1em;
+}
+
 tr.filter td.white-td {
   background-color: white;
 }

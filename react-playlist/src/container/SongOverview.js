@@ -60,7 +60,11 @@ function SongOverview() {
         <div>
             {/* display SongForm and SongTable */}
             <SongForm addSong={addSong} />
-            <SongTable songs={songs} deleteSong={deleteSong} sortTitle={sortTitle} sortArtist={sortArtist}  />
+            <SongTable songs={songs} deleteSong={deleteSong} sortTitle={sortTitle} sortArtist={sortArtist} data={[
+                { id: 1, title: "Onderweg", artist: "Abel", genre: "Nederpop", rating: 4 },
+                { id: 2, title: "Lose Yourself", artist: "Eminem", genre: "Hiphop Rap", rating: 3 },
+                { id: 3, title: "Domino", artist: "Jessie J", genre: "Pop", rating: 4 }
+            ]} />
         </div>
     );
 };
