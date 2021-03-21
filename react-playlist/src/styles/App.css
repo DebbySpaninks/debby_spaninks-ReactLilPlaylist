@@ -14,12 +14,29 @@
   font-family: "Times New Roman", Times, serif;
 }
 
+.header h1 {
+  margin-top: 10px;
+}
+
 ul {
   list-style-type: none;
 }
 
-h2 {
-  color: black;
+.link-header {
+margin-top: 25px;
+}
+
+a.link {
+  font-size: 25px;
+}
+
+.about {
+  margin-top: 40px;
+}
+
+.about-content {
+  font-size: 1.3em;
+  margin: 0 170px;
 }
 
 .form {
