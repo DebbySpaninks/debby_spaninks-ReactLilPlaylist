@@ -1,6 +1,6 @@
 import React from 'react';
 import FilterSelect from '../filter/FilterSelect';
-import useSortableData from './useSortableData';
+import useSortableData from '../sort/useSortableData';
 import SongTableItem from './SongTableItem';
 import ArrowIcon from './arrow-icon.png';
 
@@ -21,6 +21,7 @@ const SongTable = props => {
                     <tr>
                         {/* after click on tablehead we update the field we want to sort */}
                         <th>
+                                                                            {/* span van th maken??? voor styling text and icon */}
                             <button type="button"
                                 onClick={() => requestSort('title')}
                                 className={getClassNamesFor('title')}>Title

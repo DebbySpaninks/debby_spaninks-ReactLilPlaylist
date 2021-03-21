@@ -64,8 +64,10 @@ table {
   margin-left: 25px;
 }
 
-/* .arrow-icon {
-} */
+img.arrow-icon {
+  margin-left: 0.5em;
+
+}
 
 .table-header th {
   font-family: "Times New Roman", Times, serif;
