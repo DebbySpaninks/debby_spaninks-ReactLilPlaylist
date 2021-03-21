@@ -25,23 +25,6 @@ function SongOverview() {
     };
 
 
-    const sortTitle = () => {
-        console.log('sortTitle is working')
-        let sortedTitle = songs.sort((a, b) => {
-            console.log('sortedTitle is working')
-            return a.title.toLowerCase().localeCompare(b.title.toLowerCase())
-        });
-        setSongs(sortedTitle);
-    };
-
-    const sortArtist = () => {
-        console.log('sortArtist is working')
-        let sortedArtist = songs.sort((a, b) => {
-            console.log('sortedArtist is working')
-            return a.artist.toLowerCase().localeCompare(b.artist.toLowerCase())
-        });
-        setSongs(sortedArtist);
-    };
  
 
 
@@ -60,7 +43,7 @@ function SongOverview() {
         <div>
             {/* display SongForm and SongTable */}
             <SongForm addSong={addSong} />
-            <SongTable songs={songs} deleteSong={deleteSong} sortTitle={sortTitle} sortArtist={sortArtist}  />
+            <SongTable songs={songs} deleteSong={deleteSong} data={songs} />
         </div>
     );
 };
