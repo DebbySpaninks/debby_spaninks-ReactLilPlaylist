@@ -18,6 +18,10 @@ ul {
   list-style-type: none;
 }
 
+h2 {
+  color: black;
+}
+
 .form {
   margin: 30px 0px 45px;
 }

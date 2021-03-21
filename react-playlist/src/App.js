@@ -1,14 +1,16 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+// import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import NavBar from './components/routing/NavBar';
 import Header from './components/Header';
 import SongOverview from './container/SongOverview';
 import './styles/App.css';
 
-// function to display Header and SongOverview
+// function to display Router, Header and SongOverview
 function App() {
   return (
     <div className="App">
-      <Router>
+      <NavBar />
+      {/* <Router>
         <div>
           <nav>
             <ul>
@@ -23,7 +25,7 @@ function App() {
 
           {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
-          <Switch>
+          {/* <Switch>
             <Route path="/about">
               <About />
             </Route>
@@ -32,19 +34,19 @@ function App() {
             </Route>
           </Switch>
         </div>
-      </Router>
+      </Router> */}
       <Header />
       <SongOverview />
     </div>
   );
 }
 
-function Home() {
-  return <h2>Home</h2>;
-}
+// function Home() {
+//   return <h2>Home</h2>;
+// }
 
-function About() {
-  return <h2>About</h2>;
-}
+// function About() {
+//   return <h2>About</h2>;
+// }
 
 export default App;
