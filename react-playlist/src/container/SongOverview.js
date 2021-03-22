@@ -7,7 +7,7 @@ function SongOverview() {
     const [songs, setSongs] = useState([
         { id: 1, title: "Onderweg", artist: "Abel", genre: "Nederpop", rating: 4 },
         { id: 2, title: "Lose Yourself", artist: "Eminem", genre: "Hiphop Rap", rating: 3 },
-        { id: 3, title: "Domino", artist: "Jessie J", genre: "Pop", rating: 4, }
+        { id: 3, title: "Domino", artist: "Jessie J", genre: "Pop", rating: 4 }
     ]);
 
     // function that add songItems (useState, songs, setSongs)
@@ -24,22 +24,26 @@ function SongOverview() {
         setSongs(deletedSong);
     };
 
-    // function that filter select genre (useState, setSongs)
-    const filterGenre = genre => {
-        let filteredGenre = songs.filter(song => {
-            console.log('filterGenre werkt!')
 
-            // deze funtie klopt nog niet!!!!!!!!!!!
-            return song.genre === genre;
-        });
-        setSongs(filteredGenre);
-    };
+ 
+
+
+    // // function that filter select genre (useState, setSongs)
+    // const filterGenre = genre => {
+    //     let filteredGenre = songs.filter(song => {
+    //         console.log('filterGenre werkt!')
+
+    //         // deze funtie klopt nog niet!!!!!!!!!!!
+    //         return song.genre === genre;
+    //     });
+    //     setSongs(filteredGenre);
+    // };
 
     return (
         <div>
             {/* display SongForm and SongTable */}
             <SongForm addSong={addSong} />
-            <SongTable songs={songs} deleteSong={deleteSong} filterGenre={filterGenre} />
+            <SongTable songs={songs} deleteSong={deleteSong} data={songs} />
         </div>
     );
 };
