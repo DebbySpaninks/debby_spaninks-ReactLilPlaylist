@@ -1,6 +1,6 @@
 import React from 'react';
-import FilterSelect from '../filter/FilterSelect';
 import useSortableData from '../sort/useSortableData';
+import FilterSelect from '../filter/FilterSelect';
 import SongTableItem from './SongTableItem';
 import ArrowIcon from './arrow-icon.png';
 
@@ -64,8 +64,10 @@ const SongTable = props => {
                     </tr>
                 </thead>
                 <tbody>
-                    <FilterSelect />
+                    {/* filterSelect moet komen tussen de tableheaders en de data in. Dat is hier */}
+                    <FilterSelect key={props.id} filterGenre={props.filterGenre} />
                     {/* manage song (data) from added items */}
+                    {/* filter().map toevoegen met filterfunctie erin */}
                     {items.map(data => {
                         // return component (SongTableItem) 
                         return <SongTableItem

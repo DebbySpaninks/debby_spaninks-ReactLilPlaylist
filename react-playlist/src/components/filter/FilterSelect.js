@@ -5,10 +5,6 @@ function FilterSelect() {
     const [selectedGenre, setSelectedGenre] = useState('');
     const [selectedRating, setSelectedRating] = useState('');
 
-    // handleChange or handleSubmit to return the array with filtered items
-    // in SongOverview staat functie om te filteren maar is nog niet meegegeven aan FilterSelect
-    // SongTable ontvangt props () van SongOverview
-
     return (
         <tr className="filter">
             {/* create empty td's, now select is right above Genre */}
@@ -19,7 +15,6 @@ function FilterSelect() {
                     name="genre"
                     value={selectedGenre}
                     className="select-filter"
-                    // onChange={handleSelectGenre}
                     onChange={e => setSelectedGenre(e.target.value)}
                     >
                     <option value="">Filter genre</option>
@@ -33,7 +28,6 @@ function FilterSelect() {
                     name="rating"
                     value={selectedRating}
                     className="select-filter" 
-                    // onChange={handleSelectRating}
                     onChange={e => setSelectedRating(e.target.value)}
                 >
                     <option value="">Filter rating</option>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import SongForm from '../components/SongForm';
+// import FilterSelect from '../components/filter/FilterSelect';
 import SongTable from '../components/table/SongTable';
 
 // function that manage useState from songs 
@@ -24,26 +25,25 @@ function SongOverview() {
         setSongs(deletedSong);
     };
 
-
- 
-
-
-    // // function that filter select genre (useState, setSongs)
-    // const filterGenre = genre => {
-    //     let filteredGenre = songs.filter(song => {
-    //         console.log('filterGenre werkt!')
-
-    //         // deze funtie klopt nog niet!!!!!!!!!!!
-    //         return song.genre === genre;
-    //     });
-    //     setSongs(filteredGenre);
-    // };
+    // function that filter song (useState, setSongs)
+    const filterGenre = genre => {
+        console.log('filterGenre is working')
+        let filteredGenre = songs.filter(song => {
+            return song.genre === genre;
+        });
+        setSongs(filteredGenre);
+    };
 
     return (
         <div>
             {/* display SongForm and SongTable */}
-            <SongForm addSong={addSong} />
-            <SongTable songs={songs} deleteSong={deleteSong} data={songs} />
+            <SongForm 
+                addSong={addSong} />
+            <SongTable 
+                songs={songs} 
+                deleteSong={deleteSong} 
+                filterGenre={filterGenre} 
+                data={songs} />
         </div>
     );
 };
