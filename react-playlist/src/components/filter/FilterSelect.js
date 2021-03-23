@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 
-// function to filter genre                naam van functie nog aanpassen en van component!!
-function FilterSelect(items) {
+// function that accepts items
+const FilterSelect = (items) => {
   const [filterGenre, setFilterGenre] = useState('');
   const [filterRating, setFilterRating] = useState('');
 
@@ -26,12 +26,14 @@ function FilterSelect(items) {
   // useMemo hook to store cache memory (prevent for products to filter twice with the same input)
   useMemo(() => {
     let filterableProducts = [items];
+    // if filteredField is not empty then filter products from chosen field
     if (filterGenre !== '') {
-      filterableProducts = filterableProducts.filter(product => product.filterGenre === filterGenre)
+      filterableProducts.filter(product => product.filterGenre === filterGenre)
     }
     if (filterRating !== '') {
-      filterableProducts = filterableProducts.filter(product => product.filterRating === filterRating)
+      filterableProducts.filter(product => product.filterRating === filterRating)
     }
+    // return object with sorted items
     return filterableProducts;
   }, [items, filterGenre, filterRating]);
 

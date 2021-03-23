@@ -1,6 +1,6 @@
 import { useState, useMemo } from 'react';
 
-// function that accepts items and an initial sort state(null)
+// function that accepts items
 const useSortableData = (items) => {
   // start with sort nothing (null)                       Config = wijzigen van instellingen     
   // beginstuk terugveranderen als het lukt naar useState(null) en 2de argument naast items verwijderen???

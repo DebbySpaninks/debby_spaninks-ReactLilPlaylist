@@ -8,8 +8,8 @@ const SongTableItem = ({ data, deleteSong, filterGenre, filterRating, id, title,
       song={data}
       key={id}
       id={id}
-     genre={filterGenre}
-     rating={filterRating}
+    //  genre={filterGenre}
+    //  rating={filterRating}
     >
       {/* display table data*/}
       <td>{title}</td>

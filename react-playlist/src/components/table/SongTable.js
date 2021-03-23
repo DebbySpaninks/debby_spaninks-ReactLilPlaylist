@@ -66,7 +66,7 @@ const SongTable = props => {
         </thead>
         <tbody>
           {/* filterSelect moet komen tussen de tableheaders en de data in. Dat is hier */}
-          <FilterSelect key={props.id} />
+          <FilterSelect />
           {/* manage song (data) from added items */}
           {/* filter().map toevoegen met filterfunctie erin */}
           {items.map(data => {
