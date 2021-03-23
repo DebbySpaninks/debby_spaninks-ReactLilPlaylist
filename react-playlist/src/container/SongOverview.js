@@ -31,10 +31,9 @@ function SongOverview() {
       <SongForm
         addSong={addSong} />
       <SongTable
-        songs={songs}
         deleteSong={deleteSong}
         // filterGenre={filterGenre}
-        data={songs} />
+        songs={songs} />
     </div>
   );
 };
