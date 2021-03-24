@@ -15,8 +15,8 @@ const SongTable = props => {
             {/* after click on tablehead we update the field we want to sort */}
             <th className="sorted" onClick={() => requestSort('title')}>Title</th>
             <th className="sorted desc" onClick={() => requestSort('artist')}>Artist</th>
-            <th onClick={() => requestSort('genre')}>Genre</th>
-            <th onClick={() => requestSort('rating')}>Rating</th>
+            <th className="sorted desc" onClick={() => requestSort('genre')}>Genre</th>
+            <th className="sorted desc" onClick={() => requestSort('rating')}>Rating</th>
           </tr>
         </thead>
         <tbody>

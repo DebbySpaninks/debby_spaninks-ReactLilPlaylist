@@ -6,7 +6,6 @@ const useSortableData = (items) => {
   // beginstuk terugveranderen als het lukt naar useState(null) en 2de argument naast items verwijderen???
   const [sortConfig, setSortConfig] = useState(null);
 
-
   // useMemo hook to store cache memory (prevent for products to sort twice with the same input)
   const sortedItems = useMemo(() => {
     // returns copy from array with products

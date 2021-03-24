@@ -101,13 +101,13 @@ table {
 th.sorted::after {
   content: "\2303";
   font-weight: 900;
-  color: #2196f3;
+  color: black;
   position: absolute;
   transform: translatey(4px);
   padding: 0 7px 0 7px;
 }
 
-th.sorted.desc::after {
+th.desc::after {
   transform: rotate(180deg);
 }
 

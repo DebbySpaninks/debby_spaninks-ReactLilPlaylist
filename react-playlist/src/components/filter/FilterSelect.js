@@ -3,7 +3,7 @@ import React, { useState, useMemo } from 'react';
 // function that accepts items
 const FilterSelect = (items) => {
   const [filterGenre, setFilterGenre] = useState('');
-  const [filterRating, setFilterRating] = useState('');
+  const [filterRating, setFilterRating] = useState(0);
 
   // event for the value when select changes
   const handleFilterChange = (e, filterType) => {
@@ -30,7 +30,7 @@ const FilterSelect = (items) => {
     if (filterGenre !== '') {
       filterableProducts.filter(product => product.filterGenre === filterGenre)
     }
-    if (filterRating !== '') {
+    if (filterRating !== 0) {
       filterableProducts.filter(product => product.filterRating === filterRating)
     }
     // return object with sorted items
