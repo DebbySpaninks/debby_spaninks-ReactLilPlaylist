@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import SongForm from '../components/SongForm';
 import SongTable from '../components/table/SongTable';
 
-// function that manage useState from songs 
+// function that manage useState from songs
 function SongOverview() {
 
   // basic set of songs
@@ -36,14 +36,14 @@ function SongOverview() {
     }
 
     const mySorter = (a, b) => {
-      let r = 0;
+      let result = 0;
       if (a[sortKey] < b[sortKey]) {
-        r = -1;
+        result = -1;
       }
       else if (a[sortKey] > b[sortKey]) {
-        r = 1;
+        result = 1;
       }
-      return r * sortDirection;
+      return result * sortDirection;
     }
 
     // filter if a genre or rating is set
@@ -51,12 +51,12 @@ function SongOverview() {
 
   }, [genre, sortKey, rating, songs, sortDirection]);
 
-  // function that add songItems 
+  // function that add songItems
   const addSong = song => {
     setSongs([...songs, song]);
   };
 
-  // function that delete song 
+  // function that delete song
   const deleteSong = id => {
     setSongs(songs.filter(song => song.id !== id));
   };

@@ -1,10 +1,10 @@
 import React from 'react';
 import SongTableItem from './SongTableItem';
 
-// function to display SongTable with sort function (useSortableData)
+// function to display SongTable with sort function
 const SongTable = props => {
 
-  // the changeSortKey function compares if the requested sort key is equal to current key
+  // changeSortKey function compares if the requested sort key is equal to current key
   // If equal, change sort direction by multiplying with minus 1.
   // If not equal, set a new sort key
   const changeSortKey = (key) => {
@@ -53,8 +53,8 @@ const SongTable = props => {
                 onChange={e => props.setGenre(e.currentTarget.value)}>
                 <option
                   value="">all genres</option>
-                {uniqueGenres.map((g, i) =>
-                  <option key={i} value={g}>{g}</option>
+                {uniqueGenres.map((genre, index) =>
+                  <option key={index} value={genre}>{genre}</option>
                 )};
               </select>
             </th>
@@ -95,6 +95,6 @@ const SongTable = props => {
       </table>
     </div>
   );
-}
+};
 
 export default SongTable;

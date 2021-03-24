@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 // function with form input + select to display them
 function SongForm({ addSong }) {
+  
   const [title, setTitle] = useState('');
   const [artist, setArtist] = useState('');
   const [genre, setGenre] = useState('');
@@ -19,15 +20,6 @@ function SongForm({ addSong }) {
 
   return (
     <form className="form" onSubmit={handleSubmit}>
-      {/* input for TITLE */}
-      <input
-        name="title"
-        type="text"
-        value={title}
-        placeholder="Title"
-        className="input-primary"
-        onChange={e => setTitle(e.target.value)}
-      />
       {/* input for ARTIST */}
       <input
         name="artist"
@@ -36,6 +28,15 @@ function SongForm({ addSong }) {
         placeholder="Artist"
         className="input-primary"
         onChange={e => setArtist(e.target.value)}
+      />
+      {/* input for TITLE */}
+      <input
+        name="title"
+        type="text"
+        value={title}
+        placeholder="Title"
+        className="input-primary"
+        onChange={e => setTitle(e.target.value)}
       />
       {/* select options for GENRE */}
       <select
@@ -69,7 +70,7 @@ function SongForm({ addSong }) {
         className='submit-button'
         type='submit'>
         Add song
-            </button>
+      </button>
     </form>
   );
 };
