@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 // function with form input + select to display them
 function SongForm({ addSong }) {
+  
   const [title, setTitle] = useState('');
   const [artist, setArtist] = useState('');
   const [genre, setGenre] = useState('');
@@ -19,15 +20,6 @@ function SongForm({ addSong }) {
 
   return (
     <form className="form" onSubmit={handleSubmit}>
-      {/* input for TITLE */}
-      <input
-        name="title"
-        type="text"
-        value={title}
-        placeholder="Title"
-        className="input-primary"
-        onChange={e => setTitle(e.target.value)}
-      />
       {/* input for ARTIST */}
       <input
         name="artist"
@@ -36,6 +28,15 @@ function SongForm({ addSong }) {
         placeholder="Artist"
         className="input-primary"
         onChange={e => setArtist(e.target.value)}
+      />
+      {/* input for TITLE */}
+      <input
+        name="title"
+        type="text"
+        value={title}
+        placeholder="Title"
+        className="input-primary"
+        onChange={e => setTitle(e.target.value)}
       />
       {/* select options for GENRE */}
       <select
@@ -58,18 +59,19 @@ function SongForm({ addSong }) {
         onChange={e => setRating(e.target.value)}
       >
         <option value="">Rating</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
+        <option value="5">5 stars</option>
+        <option value="4">4 stars</option>
+        <option value="3">3 stars</option>
+        <option value="2">2 stars</option>
+        <option value="1">1 star</option>
+
       </select>
       {/* button to add songs after input */}
       <button
         className='submit-button'
         type='submit'>
         Add song
-            </button>
+      </button>
     </form>
   );
 };
