@@ -19,7 +19,7 @@ function SongOverview() {
   const [sortKey, setSortKey] = useState('title');
   const [sortDirection, setSortDirection] = useState(1);
   const [genre, setGenre] = useState('');
-  const [rating, setRating] = useState('1');
+  const [rating, setRating] = useState('0');
 
   useEffect(() => {
 

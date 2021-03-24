@@ -52,7 +52,7 @@ const SongTable = props => {
                 value={props.genre}
                 onChange={e => props.setGenre(e.currentTarget.value)}>
                 <option
-                  value="">all genres</option>
+                  value="">All Genres</option>
                 {uniqueGenres.map((genre, index) =>
                   <option key={index} value={genre}>{genre}</option>
                 )};
@@ -68,11 +68,13 @@ const SongTable = props => {
               <select
                 value={props.rating}
                 onChange={e => props.setRating(e.currentTarget.value)}>
-                <option value="1">minimum 1</option>
-                <option value="2">minimum 2</option>
-                <option value="3">minimum 3</option>
-                <option value="4">minimum 4</option>
-                <option value="5">minimum 5</option>
+                <option value="0">Select Stars</option>
+                <option value="5">5 stars</option>
+                <option value="4">4+ stars</option>
+                <option value="3">3+ stars</option>
+                <option value="2">2+ stars</option>
+                <option value="1">1+ star</option>
+
               </select>
             </th>
           </tr>

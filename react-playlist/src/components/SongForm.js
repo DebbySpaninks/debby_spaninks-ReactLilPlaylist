@@ -59,11 +59,12 @@ function SongForm({ addSong }) {
         onChange={e => setRating(e.target.value)}
       >
         <option value="">Rating</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
+        <option value="5">5 stars</option>
+        <option value="4">4 stars</option>
+        <option value="3">3 stars</option>
+        <option value="2">2 stars</option>
+        <option value="1">1 star</option>
+
       </select>
       {/* button to add songs after input */}
       <button
