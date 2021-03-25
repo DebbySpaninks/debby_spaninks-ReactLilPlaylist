@@ -101,7 +101,7 @@ select.select-primary {
 .table-header th {
   font-size: 1.8em;
   max-width: 160px;
-  padding: 0 6px;
+  padding: 6px;
   cursor: pointer;
 }
 

@@ -7,9 +7,9 @@ function SongOverview() {
 
   // basic set of songs
   const [songs, setSongs] = useState([
-    { id: 1, title: "Onderweg", artist: "Abel", genre: "Nederpop", rating: 4 },
-    { id: 2, title: "Lose Yourself", artist: "Eminem", genre: "Hiphop", rating: 3 },
-    { id: 3, title: "Domino", artist: "Jessie J", genre: "Pop", rating: 4 }
+    { id: 1, title: "Onderweg", artist: "Abel", genre: "Nederpop", rating: "4" },
+    { id: 2, title: "Lose Yourself", artist: "Eminem", genre: "Hiphop", rating: "3" },
+    { id: 3, title: "Domino", artist: "Jessie J", genre: "Pop", rating: "5" }
   ]);
 
   // copy of songs that can be filtered and/or sorted
@@ -36,11 +36,15 @@ function SongOverview() {
     }
 
     const mySorter = (a, b) => {
-      let result = 0;
-      if (a[sortKey] < b[sortKey]) {
+      let result = '0';
+      // sort case insensitive
+      // value (a[sortKey]) || fallback to emty string
+      const _a = (a[sortKey] || '').toLowerCase();
+      const _b = (b[sortKey] || '').toLowerCase();
+      if (_a < _b) {
         result = -1;
       }
-      else if (a[sortKey] > b[sortKey]) {
+      else if (_a > _b) {
         result = 1;
       }
       return result * sortDirection;
