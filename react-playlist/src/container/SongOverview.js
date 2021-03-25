@@ -16,10 +16,10 @@ function SongOverview() {
   const [filteredSongs, setFilteredSongs] = useState([]);
 
   // several 
-  const [sortKey, setSortKey] = useState('title');
+  const [sortKey, setSortKey] = useState('');
   const [sortDirection, setSortDirection] = useState(1);
   const [genre, setGenre] = useState('');
-  const [rating, setRating] = useState('0');
+  const [rating, setRating] = useState('1');
 
   useEffect(() => {
 

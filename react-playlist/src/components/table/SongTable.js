@@ -27,24 +27,24 @@ const SongTable = props => {
             {/* after click on tablehead we update the field we want to sort by */}
             <th>
               <span
-                className={(props.sortKey === 'title' ?
-                  (props.sortDirection < 0 ? 'sorted desc' : 'sorted') : '')}
-                onClick={() => changeSortKey('title')}>
-                Title
-              </span>
-            </th>
-            <th>
-              <span
                 className={(props.sortKey === 'artist' ?
-                  (props.sortDirection < 0 ? 'sorted desc' : 'sorted') : '')}
+                  (props.sortDirection < 0 ? 'sorted' : 'sorted desc') : '')}
                 onClick={() => changeSortKey('artist')}>
                 Artist
               </span>
             </th>
             <th>
               <span
+                className={(props.sortKey === 'title' ?
+                  (props.sortDirection < 0 ? 'sorted' : 'sorted desc') : '')}
+                onClick={() => changeSortKey('title')}>
+                Title
+              </span>
+            </th>
+            <th>
+              <span
                 className={(props.sortKey === 'genre' ?
-                  (props.sortDirection < 0 ? 'sorted desc' : 'sorted') : '')}
+                  (props.sortDirection < 0 ? 'sorted' : 'sorted desc') : '')}
                 onClick={() => changeSortKey('genre')}>
                 Genre
               </span>
@@ -52,7 +52,7 @@ const SongTable = props => {
                 value={props.genre}
                 onChange={e => props.setGenre(e.currentTarget.value)}>
                 <option
-                  value="">All Genres</option>
+                  value="">all Genres</option>
                 {uniqueGenres.map((genre, index) =>
                   <option key={index} value={genre}>{genre}</option>
                 )};
@@ -61,20 +61,19 @@ const SongTable = props => {
             <th>
               <span
                 className={(props.sortKey === 'rating' ?
-                  (props.sortDirection < 0 ? 'sorted desc' : 'sorted') : '')}
+                  (props.sortDirection < 0 ? 'sorted' : 'sorted desc') : '')}
                 onClick={() => changeSortKey('rating')}>
                 Rating
               </span>
               <select
                 value={props.rating}
                 onChange={e => props.setRating(e.currentTarget.value)}>
-                <option value="0">Select Stars</option>
-                <option value="5">5 stars</option>
-                <option value="4">4+ stars</option>
-                <option value="3">3+ stars</option>
-                <option value="2">2+ stars</option>
+                <option value="">select Stars</option>
                 <option value="1">1+ star</option>
-
+                <option value="2">2+ stars</option>
+                <option value="3">3+ stars</option>
+                <option value="4">4+ stars</option>
+                <option value="5">5 stars</option>
               </select>
             </th>
           </tr>
